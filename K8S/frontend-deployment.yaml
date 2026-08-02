@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
-  name: backend
+  name: frontend
   namespace: weather-app
 
 spec:
@@ -9,30 +10,17 @@ spec:
 
   selector:
     matchLabels:
-      app: backend
+      app: frontend
 
   template:
     metadata:
       labels:
-        app: backend
+        app: frontend
 
     spec:
       containers:
-      - name: backend
-        image: sror/weather-app-backend:latest
+      - name: frontend
+        image: sror/weather-app-frontend:latest
 
         ports:
-        - containerPort: 3000
-
-        env:
-        - name: RAPIDAPI_KEY
-          valueFrom:
-            secretKeyRef:
-              name: weather-api-secret
-              key: RAPIDAPI_KEY
-
-        - name: RAPIDAPI_HOST
-          valueFrom:
-            secretKeyRef:
-              name: weather-api-secret
-              key: RAPIDAPI_HOST
+        - containerPort: 80
