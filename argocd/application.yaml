@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/SROR7/weather-app.git
     targetRevision: main
-    path: k8s
+    path: K8S
 
   destination:
     server: https://kubernetes.default.svc
