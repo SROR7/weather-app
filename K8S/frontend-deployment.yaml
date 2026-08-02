@@ -22,5 +22,5 @@ spec:
         image: sror/weather-app-frontend:latest
 
         ports:
-        - containerPort: 5173
+        - containerPort: 80
   
