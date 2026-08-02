@@ -22,4 +22,4 @@ spec:
         image: sror/weather-app-backend:latest
 
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
