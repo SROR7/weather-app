@@ -12,7 +12,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /api/weather
+      - path: /weather
         pathType: Prefix
         backend:
           service:

@@ -18,7 +18,7 @@ function App() {
       setLoading(true);
       setError("");
 
-      const response = await axios.get("/api/weather", {
+      const response = await axios.get("/weather", {
         params: {
           city: city,
         },
